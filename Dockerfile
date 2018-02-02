@@ -30,8 +30,8 @@ ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
 
 COPY security.groovy /usr/share/jenkins/ref/init.groovy.d/security.groovy
 COPY locale.groovy /usr/share/jenkins/ref/init.groovy.d/locale.groovy
-COPY theme.groovy /usr/share/jenkins/ref/init.groovy.d/theme.goovy
-COPY docker.groovy /usr/share/jenkins/ref/init.groovy.d/docker.goovy
+COPY theme.groovy /usr/share/jenkins/ref/init.groovy.d/theme.groovy
+COPY docker.groovy /usr/share/jenkins/ref/init.groovy.d/docker.groovy
 
 #COPY plugins.txt /usr/share/jenkins/plugins.txt
 #RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
