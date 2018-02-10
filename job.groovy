@@ -14,4 +14,4 @@ job.buildersList.add(builder)
 job.save()
 Jenkins.get().reload()
 
-Jenkins.get.queue.schedule(job)
+Jenkins.get().queue.schedule(job)
