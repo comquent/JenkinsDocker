@@ -32,6 +32,7 @@ COPY security.groovy /usr/share/jenkins/ref/init.groovy.d/security.groovy
 COPY locale.groovy /usr/share/jenkins/ref/init.groovy.d/locale.groovy
 COPY theme.groovy /usr/share/jenkins/ref/init.groovy.d/theme.groovy
 COPY docker.groovy /usr/share/jenkins/ref/init.groovy.d/docker.groovy
+COPY job.groovy /usr/share/jenkins/ref/init.groovy.d/job.groovy
 
 #COPY plugins.txt /usr/share/jenkins/plugins.txt
 #RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
