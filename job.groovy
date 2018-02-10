@@ -1,4 +1,5 @@
 import jenkins.model.*
+import hudson.model.*
 import org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject
 import hudson.plugins.git.GitSCM
 import org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig
