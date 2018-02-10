@@ -7,7 +7,7 @@ import javaposse.jobdsl.plugin.ExecuteDslScripts
 
 def job = Jenkins.get().createProject(FreeStyleProject, 'seed-job')
 def builder = new ExecuteDslScripts([targets: 'jobs.seed'])
-def scm = new GitSCM('xxx')
+def scm = new GitSCM('${SCM_URL}')
 job.scm = scm
 job.buildersList.add(builder)
 
