@@ -1,11 +1,14 @@
 import jenkins.model.*
 import org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject
-import jenkins.plugins.git.*
+import hudson.plugins.git.GitSCM
+import org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig
+import javaposse.jobdsl.plugin.ExecuteDslScripts
 
-def mb_pipeline = new WorkflowMultiBranchProject(Jenkins.get(), 'hallo')
-//def scm = new GitSCMSource('https://github.com/comquent/spring-petclinic.git')
-//mb_pipeline.getSCMSources().add(scm)
+def job = Jenkins.get().createProject(FreeStyleProject, 'seed-job')
+def builder = new ExecuteDslScripts([targets: 'jobs.seed'])
+def scm = new GitSCM('xxx')
+job.scm = scm
+job.buildersList.add(builder)
 
-Jenkin
-
+job.save()
 Jenkins.get().reload()
