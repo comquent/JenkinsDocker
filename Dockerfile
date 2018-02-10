@@ -37,4 +37,10 @@ COPY job.groovy /usr/share/jenkins/ref/init.groovy.d/job.groovy
 #COPY plugins.txt /usr/share/jenkins/plugins.txt
 #RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
 
-RUN /usr/local/bin/install-plugins.sh git docker matrix-auth simple-theme-plugin workflow-aggregator
+RUN /usr/local/bin/install-plugins.sh\
+ git\
+ docker\
+ matrix-auth\
+ simple-theme-plugin\
+ workflow-aggregator\
+ job-dsl

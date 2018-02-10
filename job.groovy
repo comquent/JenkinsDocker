@@ -6,4 +6,6 @@ def mb_pipeline = new WorkflowMultiBranchProject(Jenkins.get(), 'hallo')
 //def scm = new GitSCMSource('https://github.com/comquent/spring-petclinic.git')
 //mb_pipeline.getSCMSources().add(scm)
 
+Jenkin
+
 Jenkins.get().reload()
