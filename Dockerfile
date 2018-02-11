@@ -44,4 +44,5 @@ RUN /usr/local/bin/install-plugins.sh\
  simple-theme-plugin\
  workflow-aggregator\
  job-dsl\
- startup-trigger-plugin
+ startup-trigger-plugin\
+ authorize-project
