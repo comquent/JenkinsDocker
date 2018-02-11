@@ -6,12 +6,17 @@ import org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig
 import javaposse.jobdsl.plugin.ExecuteDslScripts
 
 def job = Jenkins.get().createProject(FreeStyleProject, 'seed-job')
-def builder = new ExecuteDslScripts([targets: 'jobs.seed'])
+
 def scm = new GitSCM('${SCM_URL}')
 job.scm = scm
+
+def builder = new ExecuteDslScripts([targets: 'jobs.seed'])
 job.buildersList.add(builder)
+
+def trigger = new HudsonStartupTrigger('master', '0', '', '')
+job.addTrigger(trigger)
 
 job.save()
 Jenkins.get().reload()
 
-Jenkins.get().queue.schedule(job)
+//Jenkins.get().queue.schedule(job)
