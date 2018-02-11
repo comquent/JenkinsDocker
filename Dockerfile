@@ -43,4 +43,5 @@ RUN /usr/local/bin/install-plugins.sh\
  matrix-auth\
  simple-theme-plugin\
  workflow-aggregator\
- job-dsl
+ job-dsl\
+ startup-trigger-plugin
