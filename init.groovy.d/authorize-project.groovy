@@ -10,10 +10,10 @@ def instance = Jenkins.getInstance()
 
 // Define which strategies you want to allow to be set per project
 def strategyMap = [
-  (instance.getDescriptor(AnonymousAuthorizationStrategy.class).getId()): true, 
+  (instance.getDescriptor(AnonymousAuthorizationStrategy.class).getId()): false, 
   (instance.getDescriptor(TriggeringUsersAuthorizationStrategy.class).getId()): true,
   (instance.getDescriptor(SpecificUsersAuthorizationStrategy.class).getId()): true,
-  (instance.getDescriptor(SystemAuthorizationStrategy.class).getId()): false
+  (instance.getDescriptor(SystemAuthorizationStrategy.class).getId()): true
 ]
 
 def authenticators = QueueItemAuthenticatorConfiguration.get().getAuthenticators()
