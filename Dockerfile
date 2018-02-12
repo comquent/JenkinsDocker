@@ -41,7 +41,7 @@ RUN /usr/local/bin/install-plugins.sh\
  git\
  docker\
  matrix-auth\
- simple-theme-plugin\
+ simple-theme-plugin:0.3\
  workflow-aggregator\
  job-dsl\
  startup-trigger-plugin\
