@@ -24,3 +24,9 @@ for(authenticator in authenticators) {
     configureProjectAuthenticator = false
   }
 }
+
+if(configureProjectAuthenticator) {
+  authenticators.add(new ProjectQueueItemAuthenticator(strategyMap))
+}
+
+instance.save()
