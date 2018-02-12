@@ -12,4 +12,3 @@ user.save()
  
 jenkins.getAuthorizationStrategy().add(Jenkins.ADMINISTER, env.JENKINS_USER)
 jenkins.save()
-
