@@ -1,1 +1,3 @@
-println SCM_URL
+job('xxx) {
+	descripition SCM_URL
+}
