@@ -33,6 +33,7 @@ COPY init.groovy.d/locale.groovy /usr/share/jenkins/ref/init.groovy.d/locale.gro
 COPY init.groovy.d/theme.groovy /usr/share/jenkins/ref/init.groovy.d/theme.groovy
 COPY init.groovy.d/docker.groovy /usr/share/jenkins/ref/init.groovy.d/docker.groovy
 COPY init.groovy.d/job.groovy /usr/share/jenkins/ref/init.groovy.d/job.groovy
+COPY init.groovy.d/authorize-project.groovy /usr/share/jenkins/ref/init.groovy.d/authorize-project.groovy
 
 #COPY plugins.txt /usr/share/jenkins/plugins.txt
 #RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
