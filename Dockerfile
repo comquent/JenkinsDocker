@@ -28,12 +28,7 @@ ENV JENKINS_PASS cq
 
 ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
 
-COPY init.groovy.d/security.groovy /usr/share/jenkins/ref/init.groovy.d/security.groovy
-COPY init.groovy.d/locale.groovy /usr/share/jenkins/ref/init.groovy.d/locale.groovy
-COPY init.groovy.d/theme.groovy /usr/share/jenkins/ref/init.groovy.d/theme.groovy
-COPY init.groovy.d/docker.groovy /usr/share/jenkins/ref/init.groovy.d/docker.groovy
-COPY init.groovy.d/job.groovy /usr/share/jenkins/ref/init.groovy.d/job.groovy
-COPY init.groovy.d/authorize-project.groovy /usr/share/jenkins/ref/init.groovy.d/authorize-project.groovy
+COPY init.groovy.d/* /usr/share/jenkins/ref/init.groovy.d/
 
 #COPY plugins.txt /usr/share/jenkins/plugins.txt
 #RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
