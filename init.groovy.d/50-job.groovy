@@ -11,6 +11,11 @@ import org.jenkinsci.plugins.authorizeproject.strategy.SpecificUsersAuthorizatio
 def job = Jenkins.get().createProject(FreeStyleProject, 'seed-job')
 
 def scm = new GitSCM('${SCM_URL}')
+
+// Tool installation job
+// Trigger this job first
+// This job triggers the seed job after it is finished.
+
 job.scm = scm
 
 def builder = new ExecuteDslScripts([targets: 'jobs.seed'])
@@ -24,4 +29,5 @@ def authorizeProjectProperty = new AuthorizeProjectProperty(new SpecificUsersAut
 job.addProperty(authorizeProjectProperty)
 
 job.save()
+
 Jenkins.get().reload()
