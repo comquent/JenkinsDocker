@@ -6,6 +6,7 @@ import org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig
 import javaposse.jobdsl.plugin.ExecuteDslScripts
 import org.jvnet.hudson.plugins.triggers.startup.HudsonStartupTrigger
 import org.jenkinsci.plugins.authorizeproject.AuthorizeProjectProperty
+import org.jenkinsci.plugins.authorizeproject.strategy.SpecificUsersAuthorizationStrategy
 
 def job = Jenkins.get().createProject(FreeStyleProject, 'seed-job')
 
