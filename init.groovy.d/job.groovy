@@ -5,6 +5,7 @@ import hudson.plugins.git.GitSCM
 import org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig
 import javaposse.jobdsl.plugin.ExecuteDslScripts
 import org.jvnet.hudson.plugins.triggers.startup.HudsonStartupTrigger
+import org.jenkinsci.plugins.authorizeproject.AuthorizeProjectProperty
 
 def job = Jenkins.get().createProject(FreeStyleProject, 'seed-job')
 
@@ -17,6 +18,8 @@ job.buildersList.add(builder)
 
 def trigger = new HudsonStartupTrigger('master', '0', '', '')
 job.addTrigger(trigger)
+
+def authorizeProjectProperty = new AuthorizeProjectProperty(new SpecificUsersAuthorizationStrategy('admin'))
 
 job.save()
 Jenkins.get().reload()
