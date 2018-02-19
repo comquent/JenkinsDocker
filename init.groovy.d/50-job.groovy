@@ -14,7 +14,7 @@ def scm = new GitSCM('${SCM_URL}')
 job.scm = scm
 
 def builder = new ExecuteDslScripts([targets: 'jobs.seed'])
-builder.sandbox = true
+builder.sandbox = false
 job.buildersList.add(builder)
 
 def trigger = new HudsonStartupTrigger('master', '0', '', '')
