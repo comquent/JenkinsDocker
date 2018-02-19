@@ -20,8 +20,8 @@ job.buildersList.add(builder)
 def trigger = new HudsonStartupTrigger('master', '0', '', '')
 job.addTrigger(trigger)
 
-//def authorizeProjectProperty = new AuthorizeProjectProperty(new SpecificUsersAuthorizationStrategy('admin'))
-//job.addProperty(authorizeProjectProperty)
+def authorizeProjectProperty = new AuthorizeProjectProperty(new SpecificUsersAuthorizationStrategy('admin'))
+job.addProperty(authorizeProjectProperty)
 
 job.save()
 Jenkins.get().reload()
