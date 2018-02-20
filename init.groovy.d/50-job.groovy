@@ -18,7 +18,7 @@ def scm = new GitSCM('${SCM_URL}')
 
 job.scm = scm
 
-def builder = new ExecuteDslScripts([targets: 'jobs.seed'])
+def builder = new ExecuteDslScripts([targets: 'tools.groovy\njobs.seed'])
 builder.sandbox = false
 job.buildersList.add(builder)
 
