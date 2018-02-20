@@ -41,4 +41,5 @@ RUN /usr/local/bin/install-plugins.sh\
  workflow-aggregator\
  job-dsl\
  startup-trigger-plugin\
- authorize-project
+ authorize-project\
+ pipeline-maven
