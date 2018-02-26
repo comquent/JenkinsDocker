@@ -19,11 +19,6 @@ def resetEnvironmentVariable(String name, String value) {
         theEnvironmentField.setAccessible(true);
         def env = (Map<String, String>) theEnvironmentField.get(null);
         env.put(name, value);
-        def theCaseInsensitiveEnvironmentField = processEnvironmentClass
-                .getDeclaredField("theCaseInsensitiveEnvironment");
-        theCaseInsensitiveEnvironmentField.setAccessible(true);
-        def cienv = (Map<String, String>) theCaseInsensitiveEnvironmentField.get(null);
-        cienv.put(name, value);
     }
 
 resetEnvironmentVariable('JENKINS_PASS', '-----')
