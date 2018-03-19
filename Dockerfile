@@ -42,4 +42,5 @@ RUN /usr/local/bin/install-plugins.sh\
  job-dsl\
  startup-trigger-plugin\
  authorize-project\
- pipeline-maven
+ pipeline-maven\
+ timestamper
