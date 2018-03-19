@@ -21,4 +21,4 @@ def resetEnvironmentVariable(String name, String value) {
         env.put(name, value);
     }
 
-resetEnvironmentVariable('JENKINS_PASS', '-----')
+// resetEnvironmentVariable('JENKINS_PASS', '-----')
